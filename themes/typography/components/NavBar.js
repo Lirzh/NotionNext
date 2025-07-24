@@ -31,11 +31,6 @@ export default function NavBar(props) {
           <MenuList {...props} />
         </div>
         <SocialButton />
-        {siteConfig('BEI_AN') && (
-          <a href={siteConfig('BEI_AN_LINK')} className="text-sm text-gray-500 dark:text-gray-400 mt-4 block text-center">
-            {siteConfig('BEI_AN')}
-          </a>
-        )}
       </nav>
     </div>
   )
