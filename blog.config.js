@@ -5,7 +5,7 @@ const BLOG = {
   NOTION_PAGE_ID:
     process.env.NOTION_PAGE_ID ||
     '02ab3b8678004aa69e9e415905ef32a5,en:7c1d570661754c8fbc568e00a01fd70e',
-  THEME: process.env.NEXT_PUBLIC_THEME || 'heo', // 当前主题，在themes文件夹下可找到所有支持的主题；主题名称就是文件夹名，例如 example,fukasawa,gitbook,heo,hexo,landing,matery,medium,next,nobelium,plog,simple
+  THEME: process.env.NEXT_PUBLIC_THEME || 'typography', // 当前主题，在themes文件夹下可找到所有支持的主题；主题名称就是文件夹名，例如 example,fukasawa,gitbook,heo,hexo,landing,matery,medium,next,nobelium,plog,simple
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: process.env.NEXT_PUBLIC_SINCE || 2024, // e.g if leave this empty, current year will be used.
 
@@ -69,3 +69,20 @@ const BLOG = {
 }
 
 module.exports = BLOG
+const CONFIG = {
+  // 博客標題 雙語言
+  TYPOGRAPHY_BLOG_NAME: process.env.NEXT_PUBLIC_TYPOGRAPHY_BLOG_NAME || '朝闻道',
+  TYPOGRAPHY_BLOG_NAME_EN: process.env.NEXT_PUBLIC_TYPOGRAPHY_BLOG_NAME || 'Tao at dawn',
+
+  TYPOGRAPHY_POST_AD_ENABLE: process.env.NEXT_PUBLIC_TYPOGRAPHY_POST_AD_ENABLE || false, // 文章列表是否插入广告
+
+  TYPOGRAPHY_POST_COVER_ENABLE: process.env.NEXT_PUBLIC_TYPOGRAPHY_POST_COVER_ENABLE || false, // 是否展示博客封面
+
+  TYPOGRAPHY_ARTICLE_RECOMMEND_POSTS: process.env.NEXT_PUBLIC_TYPOGRAPHY_ARTICLE_RECOMMEND_POSTS || true, // 文章详情底部显示推荐
+
+  // 菜单配置
+  TYPOGRAPHY_MENU_CATEGORY: true, // 显示分类
+  TYPOGRAPHY_MENU_TAG: true, // 显示标签
+  TYPOGRAPHY_MENU_ARCHIVE: true, // 显示归档
+}
+export default CONFIG
